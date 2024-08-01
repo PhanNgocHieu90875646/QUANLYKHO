@@ -56,6 +56,7 @@ namespace QUANLYKHO
             int currentRow = dataGridView.CurrentCell.RowIndex;
             textmnh.Text = dataGridView.Rows[currentRow].Cells[0].Value.ToString();
             textmvt.Text = dataGridView.Rows[currentRow].Cells[1].Value.ToString();
+            texttenvr.Text = dataGridView.Rows[currentRow].Cells[2].Value.ToString();
             textncc.Text = dataGridView.Rows[currentRow].Cells[3].Value.ToString();
             textsoluong.Text = dataGridView.Rows[currentRow].Cells[4].Value.ToString();
             texttien.Text = dataGridView.Rows[currentRow].Cells[5].Value.ToString();

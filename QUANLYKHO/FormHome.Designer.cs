@@ -53,7 +53,7 @@
             pictureBox1 = new PictureBox();
             labeltonkho = new Label();
             panel3 = new Panel();
-            pictureBox5 = new PictureBox();
+            label = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             groupBox4.SuspendLayout();
@@ -65,7 +65,6 @@
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -366,22 +365,24 @@
             // panel3
             // 
             panel3.BackColor = SystemColors.Highlight;
-            panel3.Controls.Add(pictureBox5);
+            panel3.Controls.Add(label);
             panel3.Dock = DockStyle.Top;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
             panel3.Size = new Size(941, 68);
             panel3.TabIndex = 0;
             // 
-            // pictureBox5
+            // label
             // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(6, 0);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(106, 68);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 0;
-            pictureBox5.TabStop = false;
+            label.AutoSize = true;
+            label.BackColor = SystemColors.Highlight;
+            label.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label.ForeColor = SystemColors.ButtonHighlight;
+            label.Location = new Point(33, 9);
+            label.Name = "label";
+            label.Size = new Size(96, 36);
+            label.TabIndex = 0;
+            label.Text = "Home";
             // 
             // FormHome
             // 
@@ -409,7 +410,7 @@
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            panel3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -441,6 +442,5 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox4;
         private PictureBox pictureBox3;
-        private PictureBox pictureBox5;
     }
 }

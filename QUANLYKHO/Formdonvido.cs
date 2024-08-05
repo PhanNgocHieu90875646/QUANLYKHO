@@ -196,5 +196,10 @@ namespace QUANLYKHO
             textmadvd.Text = dataGridView.Rows[currentRow].Cells[0].Value.ToString();
             texttendvd.Text = dataGridView.Rows[currentRow].Cells[1].Value.ToString();
         }
+
+        private void textmadvd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

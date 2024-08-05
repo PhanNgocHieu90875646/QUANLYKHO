@@ -31,8 +31,12 @@
             login = new Button();
             MK = new TextBox();
             tk = new TextBox();
-            label2 = new Label();
-            label1 = new Label();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // login
@@ -41,7 +45,7 @@
             login.BackColor = Color.Green;
             login.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
             login.ForeColor = Color.White;
-            login.Location = new Point(181, 220);
+            login.Location = new Point(315, 330);
             login.Name = "login";
             login.Size = new Size(136, 43);
             login.TabIndex = 0;
@@ -52,7 +56,7 @@
             // MK
             // 
             MK.Anchor = AnchorStyles.None;
-            MK.Location = new Point(137, 157);
+            MK.Location = new Point(277, 277);
             MK.Name = "MK";
             MK.PasswordChar = '*';
             MK.Size = new Size(274, 27);
@@ -62,48 +66,60 @@
             // 
             tk.Anchor = AnchorStyles.None;
             tk.BackColor = SystemColors.Window;
-            tk.Location = new Point(137, 72);
+            tk.Location = new Point(277, 218);
             tk.Name = "tk";
             tk.Size = new Size(274, 27);
             tk.TabIndex = 7;
             tk.TextChanged += tk_TextChanged_1;
             // 
-            // label2
+            // pictureBox1
             // 
-            label2.Anchor = AnchorStyles.None;
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(33, 160);
-            label2.Name = "label2";
-            label2.Size = new Size(82, 18);
-            label2.TabIndex = 6;
-            label2.Text = "Mật khẩu:";
+            pictureBox1.Image = Properties.Resources.dangnhap;
+            pictureBox1.Location = new Point(-1, 1);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(765, 186);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
             // 
-            // label1
+            // pictureBox2
             // 
-            label1.Anchor = AnchorStyles.None;
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(33, 75);
-            label1.Name = "label1";
-            label1.Size = new Size(87, 18);
-            label1.TabIndex = 5;
-            label1.Text = "Tài khoản:";
+            pictureBox2.Image = Properties.Resources.nguoidung;
+            pictureBox2.Location = new Point(230, 218);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(41, 27);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 10;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.KHOA;
+            pictureBox3.Location = new Point(230, 277);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(41, 27);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 11;
+            pictureBox3.TabStop = false;
             // 
             // Formdangnhap
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Azure;
-            ClientSize = new Size(482, 301);
+            ClientSize = new Size(763, 409);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
             Controls.Add(MK);
             Controls.Add(tk);
-            Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(login);
             Name = "Formdangnhap";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PHẦN MỀM QUẢN LÝ KHO";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -113,7 +129,8 @@
         private Button login;
         private TextBox MK;
         private TextBox tk;
-        private Label label2;
-        private Label label1;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }

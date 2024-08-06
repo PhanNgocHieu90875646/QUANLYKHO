@@ -21,7 +21,7 @@ namespace QUANLYKHO
         private void LoadData()
         {
             string connectionString = "Data Source=HIEUPHAN\\SQLEXPRESS;Initial Catalog=qlk;Integrated Security=True;Encrypt=False";
-            string query = "SELECT PHIEU_NHAP.MAPHIEUNHAP,PHIEU_NHAP.MAVATTU,VATTU.TENVT,PHIEU_NHAP.MANCC,PHIEU_NHAP.SOLUONG,PHIEU_NHAP.THANHTIEN,PHIEU_NHAP.NGAYNHAPHANG FROM PHIEU_NHAP INNER JOIN VATTU ON PHIEU_NHAP.MAVATTU=VATTU.MAVATTU ";
+            string query = "SELECT PHIEU_NHAP.MAPHIEUNHAP,PHIEU_NHAP.MAVATTU,VATTU.TENVT,PHIEU_NHAP.MANCC,PHIEU_NHAP.SOLUONG,PHIEU_NHAP.THANHTIEN,PHIEU_NHAP.MANV,PHIEU_NHAP.NGAYNHAPHANG FROM PHIEU_NHAP INNER JOIN VATTU ON PHIEU_NHAP.MAVATTU=VATTU.MAVATTU ";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -60,8 +60,9 @@ namespace QUANLYKHO
             textncc.Text = dataGridView.Rows[currentRow].Cells[3].Value.ToString();
             textsoluong.Text = dataGridView.Rows[currentRow].Cells[4].Value.ToString();
             texttien.Text = dataGridView.Rows[currentRow].Cells[5].Value.ToString();
-            textBox1.Text = dataGridView.Rows[currentRow].Cells[6].Value.ToString();
+          
             string dateStr = dataGridView.Rows[currentRow].Cells[7].Value.ToString();
+            tb_manv.Text = dataGridView.Rows[currentRow].Cells[6].Value.ToString();
             DateTime dateTime = DateTime.Parse(dateStr);
             dateTimenh.Value = dateTime;
 
@@ -74,8 +75,9 @@ namespace QUANLYKHO
             textncc.Text = "";
             textsoluong.Text = "";
             texttien.Text = "";
+            tb_manv.Text = "";
             dateTimenh.Text = "";
-            textBox1.Text = "";
+            
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -155,9 +157,10 @@ namespace QUANLYKHO
                                     insertCommand.Parameters.AddWithValue("@MANCC", textncc.Text);
                                     insertCommand.Parameters.AddWithValue("@SOLUONG", textsoluong.Text);
                                     insertCommand.Parameters.AddWithValue("@THANHTIEN", texttien.Text);
-                                    insertCommand.Parameters.AddWithValue("@MANV", textBox1.Text);
+                                   
                                     insertCommand.Parameters.AddWithValue("@NGAYNHAPHANG",dateTimenh.Value);
-                                    
+                                    insertCommand.Parameters.AddWithValue("@MANV", tb_manv.Text);
+
 
                                     int result = insertCommand.ExecuteNonQuery();
 
@@ -198,8 +201,9 @@ namespace QUANLYKHO
                     command.Parameters.AddWithValue("@MANCC", textncc.Text);
                     command.Parameters.AddWithValue("@SOLUONG", textsoluong.Text);
                     command.Parameters.AddWithValue("@THANHTIEN", texttien.Text);
-                    command.Parameters.AddWithValue("@MANV", textBox1.Text);
+                  
                     command.Parameters.AddWithValue("@NGAYNHAPHANG", dateTimenh.Value);
+                    command.Parameters.AddWithValue("@MANV", tb_manv.Text);
 
                     try
                     {

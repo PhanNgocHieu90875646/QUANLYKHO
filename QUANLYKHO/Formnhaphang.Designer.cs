@@ -51,7 +51,7 @@
             saveFileDialog1 = new SaveFileDialog();
             texttenvr = new TextBox();
             label7 = new Label();
-            textBox1 = new TextBox();
+            tb_manv = new TextBox();
             label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridViewnk).BeginInit();
             SuspendLayout();
@@ -301,14 +301,14 @@
             label7.TabIndex = 18;
             label7.Text = "TenVT:";
             // 
-            // textBox1
+            // tb_manv
             // 
-            textBox1.Anchor = AnchorStyles.Top;
-            textBox1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(270, 346);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(338, 24);
-            textBox1.TabIndex = 21;
+            tb_manv.Anchor = AnchorStyles.Top;
+            tb_manv.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            tb_manv.Location = new Point(270, 346);
+            tb_manv.Name = "tb_manv";
+            tb_manv.Size = new Size(338, 24);
+            tb_manv.TabIndex = 21;
             // 
             // label8
             // 
@@ -327,7 +327,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Azure;
             ClientSize = new Size(1086, 715);
-            Controls.Add(textBox1);
+            Controls.Add(tb_manv);
             Controls.Add(label8);
             Controls.Add(texttenvr);
             Controls.Add(label7);
@@ -388,7 +388,7 @@
         private SaveFileDialog saveFileDialog1;
         private TextBox texttenvr;
         private Label label7;
-        private TextBox textBox1;
+        private TextBox tb_manv;
         private Label label8;
     }
 }

@@ -60,7 +60,8 @@ namespace QUANLYKHO
             textncc.Text = dataGridView.Rows[currentRow].Cells[3].Value.ToString();
             textsoluong.Text = dataGridView.Rows[currentRow].Cells[4].Value.ToString();
             texttien.Text = dataGridView.Rows[currentRow].Cells[5].Value.ToString();
-            string dateStr = dataGridView.Rows[currentRow].Cells[6].Value.ToString();
+            textBox1.Text = dataGridView.Rows[currentRow].Cells[6].Value.ToString();
+            string dateStr = dataGridView.Rows[currentRow].Cells[7].Value.ToString();
             DateTime dateTime = DateTime.Parse(dateStr);
             dateTimenh.Value = dateTime;
 
@@ -74,6 +75,7 @@ namespace QUANLYKHO
             textsoluong.Text = "";
             texttien.Text = "";
             dateTimenh.Text = "";
+            textBox1.Text = "";
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -153,8 +155,10 @@ namespace QUANLYKHO
                                     insertCommand.Parameters.AddWithValue("@MANCC", textncc.Text);
                                     insertCommand.Parameters.AddWithValue("@SOLUONG", textsoluong.Text);
                                     insertCommand.Parameters.AddWithValue("@THANHTIEN", texttien.Text);
+                                    insertCommand.Parameters.AddWithValue("@MANV", textBox1.Text);
                                     insertCommand.Parameters.AddWithValue("@NGAYNHAPHANG",dateTimenh.Value);
-                                  
+                                    
+
                                     int result = insertCommand.ExecuteNonQuery();
 
                                     if (result > 0)
@@ -194,6 +198,7 @@ namespace QUANLYKHO
                     command.Parameters.AddWithValue("@MANCC", textncc.Text);
                     command.Parameters.AddWithValue("@SOLUONG", textsoluong.Text);
                     command.Parameters.AddWithValue("@THANHTIEN", texttien.Text);
+                    command.Parameters.AddWithValue("@MANV", textBox1.Text);
                     command.Parameters.AddWithValue("@NGAYNHAPHANG", dateTimenh.Value);
 
                     try

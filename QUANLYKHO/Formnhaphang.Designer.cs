@@ -51,6 +51,8 @@
             saveFileDialog1 = new SaveFileDialog();
             texttenvr = new TextBox();
             label7 = new Label();
+            textBox1 = new TextBox();
+            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridViewnk).BeginInit();
             SuspendLayout();
             // 
@@ -119,7 +121,7 @@
             label6.Anchor = AnchorStyles.Top;
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(122, 348);
+            label6.Location = new Point(126, 397);
             label6.Name = "label6";
             label6.Size = new Size(138, 18);
             label6.TabIndex = 5;
@@ -180,7 +182,7 @@
             // 
             dateTimenh.Anchor = AnchorStyles.Top;
             dateTimenh.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            dateTimenh.Location = new Point(270, 348);
+            dateTimenh.Location = new Point(270, 392);
             dateTimenh.Name = "dateTimenh";
             dateTimenh.Size = new Size(338, 24);
             dateTimenh.TabIndex = 11;
@@ -198,13 +200,13 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
             dataGridViewnk.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridViewnk.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewnk.Location = new Point(82, 403);
+            dataGridViewnk.Location = new Point(82, 451);
             dataGridViewnk.Name = "dataGridViewnk";
             dataGridViewnk.RowHeadersWidth = 51;
             dataGridViewCellStyle4.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewnk.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridViewnk.RowTemplate.Height = 29;
-            dataGridViewnk.Size = new Size(826, 208);
+            dataGridViewnk.Size = new Size(898, 219);
             dataGridViewnk.TabIndex = 12;
             dataGridViewnk.CellClick += dataGridViewnk_CellClick;
             dataGridViewnk.CellContentClick += dataGridViewnk_CellContentClick;
@@ -299,12 +301,34 @@
             label7.TabIndex = 18;
             label7.Text = "TenVT:";
             // 
+            // textBox1
+            // 
+            textBox1.Anchor = AnchorStyles.Top;
+            textBox1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox1.Location = new Point(270, 346);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(338, 24);
+            textBox1.TabIndex = 21;
+            // 
+            // label8
+            // 
+            label8.Anchor = AnchorStyles.Top;
+            label8.AutoSize = true;
+            label8.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(126, 352);
+            label8.Name = "label8";
+            label8.Size = new Size(54, 18);
+            label8.TabIndex = 20;
+            label8.Text = "MANV";
+            // 
             // Formnhaphang
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Azure;
             ClientSize = new Size(1086, 715);
+            Controls.Add(textBox1);
+            Controls.Add(label8);
             Controls.Add(texttenvr);
             Controls.Add(label7);
             Controls.Add(IN);
@@ -364,5 +388,7 @@
         private SaveFileDialog saveFileDialog1;
         private TextBox texttenvr;
         private Label label7;
+        private TextBox textBox1;
+        private Label label8;
     }
 }
